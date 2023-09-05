@@ -6,7 +6,13 @@ namespace Owl\Bundle\SettingBundle\Doctrine\ORM;
 
 use Sylius\Bundle\ResourceBundle\Doctrine\ORM\EntityRepository;
 use Owl\Component\Setting\Repository\SettingRepositoryInterface;
+use Owl\Component\Setting\Model\SettingInterface;
 
+/**
+ * @template T of SettingInterface
+ *
+ * @implements SettingRepositoryInterface<T>
+ */
 class SettingRepository extends EntityRepository implements SettingRepositoryInterface
 {
     public function finAllBySection(string $section): array

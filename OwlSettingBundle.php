@@ -22,8 +22,6 @@ final class OwlSettingBundle extends AbstractResourceBundle
     }
 
     /**
-     * @return string
-     *
      * @psalm-return 'Owl\Component\Setting\Model'
      */
     protected function getModelNamespace(): string

@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Owl\Bundle\SettingBundle\Factory;
 
+use Owl\Bridge\SyliusResource\Controller\RequestConfiguration;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\Form\FormInterface;
-use Owl\Bridge\SyliusResource\Controller\RequestConfiguration;
 
 final class SettingFormFactory implements SettingFormFactoryInterface
 {

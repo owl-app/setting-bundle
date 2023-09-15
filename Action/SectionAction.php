@@ -4,18 +4,18 @@ declare(strict_types=1);
 
 namespace Owl\Bundle\SettingBundle\Action;
 
-use InvalidArgumentException;
 use FOS\RestBundle\View\View;
+use InvalidArgumentException;
 use Owl\Bridge\SyliusResource\Controller\AbstractResourceAction;
 use Owl\Bridge\SyliusResource\Controller\RedirectHandlerInterface;
+use Owl\Bridge\SyliusResource\Controller\RequestConfiguration;
 use Owl\Bridge\SyliusResource\Exception\InvalidResponseException;
 use Owl\Bundle\SettingBundle\Factory\SettingFormFactoryInterface;
+use Owl\Component\Setting\Storage\SettingStorageInterface;
+use Sylius\Bundle\ResourceBundle\Controller\RequestConfigurationFactoryInterface;
+use Sylius\Bundle\ResourceBundle\Controller\ViewHandlerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Sylius\Bundle\ResourceBundle\Controller\RequestConfigurationFactoryInterface;
-use Owl\Bridge\SyliusResource\Controller\RequestConfiguration;
-use Owl\Component\Setting\Storage\SettingStorageInterface;
-use Sylius\Bundle\ResourceBundle\Controller\ViewHandlerInterface;
 
 final class SectionAction extends AbstractResourceAction
 {
@@ -26,7 +26,7 @@ final class SectionAction extends AbstractResourceAction
         private SettingFormFactoryInterface $settingFormFactory,
         private SettingStorageInterface $storage,
         private ViewHandlerInterface $viewHandler,
-        private RedirectHandlerInterface $redirectHandler
+        private RedirectHandlerInterface $redirectHandler,
     ) {
     }
 
